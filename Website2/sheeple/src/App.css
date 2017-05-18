@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'facebook-iconfont';
+    src:  url('../fonts/facebook-iconfont.eot');
+    src:  url('../fonts/facebook-iconfont.eot') format('embedded-opentype'),
+        url('../fonts/facebook-iconfont.ttf') format('truetype'),
+        url('../fonts/facebook-iconfont.woff') format('woff'),
+        url('../fonts/facebook-iconfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'facebook-iconfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+body {
+    margin: 0;
+    background-color: #dcdee3;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 20px 30px;
+    background-color: #3b5998;
+}
+
+header img {
+    height: 50px;
+    float: left;
+}
+header .notificationglobe {
+    display: block;
+    text-decoration: none;
+    float: right;
+    color: #18243d;
+    margin-top: 10px;
+    position: relative;
+}
+header .notificationglobe.active {
+    color: #FFF
+}
+header .notificationglobe .icon{
+    font-size: 30px;
+}
+
+header .notificationglobe .notification-amount{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 2px;
+    background-color: #f43b46;
+    padding: 2px 4px 2px 4px;
+    display: none;
+}
+header .notificationglobe.active .notification-amount{
+    display: block;
+}
+.post {
+    background-color:#FFF;
+    margin-top: 30px;
+    padding: 20px 30px 0 30px;
+}
+.post .post-header > img {
+    width: 75px;
+}
+.post.nonactive {
+    opacity: 0.5;
+}
+
+.post-header img {
+    float: left;
+}
+.post-header h2, .post-header .post-info p {
+    margin: 0 0 0 85px;
+}
+.post-header h2, .post-content p {
+    font-size: 14pt;
+}
+.post-header .post-info p {
+    color: #9197a3;
+}
+
+.post-content .article {
+    border: 1px solid #dcdee3;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 2px #EEE;
+}
+.post-content .article img {
+    width: 100%;
+}
+
+.post-content .article h3 {
+    margin: 1em 0.8em;
+    font-size: 18px;
+}
+
+.post-likesamount .likesamount, .post-likesamount .dislikesamount{
+    display: inline-block;
+    margin-right: 1em;
+    color: #9197a3;
+}
+.post-likesamount .icon {
+    font-size: 15pt;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+.post-likesamount .likesamount .icon {
+    color: #5e91ff;
+}
+.post-likesamount .dislikesamount .icon {
+    color: #f25268;
+}
+
+.post-likesamount  {
+    margin-bottom: 1em;
+}
+.post-actions {
+    border-top: 1px solid #dcdee3;
+}
+.post-actions .action{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 15px 0 15px 0
+}
+.post-actions .action a {
+    text-decoration: none;
+    color: #4e5665;
+    font-weight: 700;
+    font-size: 14pt;
+}
+.post-actions .action.chosen:nth-child(1) a {
+    color: #5e91ff;
+}
+.post-actions .action.chosen:nth-child(2) a {
+    color: #f25268;
+}
+.post-actions .action a .icon{
+    font-size: 20pt;
+    vertical-align: middle;
+    margin-right: 6px
+}
+
+
+.cf:before, .cf:after {
+    content: " "; display: table;    
+}
+
+.cf:after { 
+    clear: both; 
+}
