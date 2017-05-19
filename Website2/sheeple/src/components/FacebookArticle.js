@@ -3,8 +3,17 @@ import profilePic from "../../img/anoymous-profilepic.png";
 import '../App.css';
 
 
-export class FacebookPost extends Component {
-    
+
+//opslossing voor alle images van de artiekelen in te laden zonder voor elke images een import te moeten schrijven
+//http://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+const images = importAll(require.context('../../img', false, /\.(png|jpe?g|svg)$/));
+
+export class FacebookArticle extends Component {
     constructor(){
         super();
         this.state = {
@@ -28,8 +37,7 @@ export class FacebookPost extends Component {
     
   render() {
     return (
-        
-    <div className={this.state.Actief}>
+    <div className= {this.state.Actief}>
             <div className="post-header cf">
                 <img src={profilePic} className="profilePic" alt="profilePic" />
                 <h2>{this.props.user}</h2>
@@ -39,14 +47,19 @@ export class FacebookPost extends Component {
             </div>
             <div className="post-content">
                 <p>{this.props.vraag}</p>
+                <div className="article">
+                    <img alt={this.props.imageTitel} src={images[this.props.image]} />
+                    <h3>{this.props.imageTitel}</h3>
+        
+                </div>
             </div>
             <div className="post-likesamount">
                 <div className="likesamount"><span className="icon">L</span>243</div>
                 <div className="dislikesamount"><span className="icon">D</span>24</div>
             </div>
             <div className="post-actions cf">
-                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)}><a href="#"><span className="icon">l</span>Like</a></div>
-                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)}><a href="#"><span className="icon">d</span>Dislike</a></div>
+                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">l</span>Like</a></div>
+                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)} ><a href="#"><span className="icon">d</span>Dislike</a></div>
             </div>
         </div>
  );
