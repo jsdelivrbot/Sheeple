@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import profilePic from "../../img/anoymous-profilepic.png";
-import '../App.css';
+import profilePic from "../../public/img/anoymous-profilepic.png";
+//import '../../public/App.css';
 
 
 
@@ -11,7 +11,7 @@ function importAll(r) {
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
-const images = importAll(require.context('../../img', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../public/img/', false, /\.(png|jpe?g|svg)$/));
 
 export class FacebookArticle extends Component {
     constructor(){
@@ -27,12 +27,15 @@ export class FacebookArticle extends Component {
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
                        Selected: "action chosen"});
+         this.props.likeArtiekel(this.props.vragen.id);
+         
     }
     clickHandler2(e){
        e.preventDefault();
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
                        Selected2: "action chosen"});
+        this.props.dislikeArtiekel(this.props.vragen.id);
     }
     
   render() {
@@ -54,8 +57,10 @@ export class FacebookArticle extends Component {
                 </div>
             </div>
             <div className="post-likesamount">
-                <div className="likesamount"><span className="icon">L</span>243</div>
-                <div className="dislikesamount"><span className="icon">D</span>24</div>
+                <div className="likesamount"><span className="icon">L</span>
+        {this.props.likes}</div>
+                <div className="dislikesamount"><span className="icon">D</span>
+        {this.props.dislikes}</div>
             </div>
             <div className="post-actions cf">
                 <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">l</span>Like</a></div>

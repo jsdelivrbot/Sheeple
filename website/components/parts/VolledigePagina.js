@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {FacebookPost} from './components/FacebookPost';
-import {FacebookArticle} from './components/FacebookArticle';
-import {Header} from './components/Header';
+import socket from 'socket.io';
+import {FacebookPost} from './app/components/FacebookPost';
+import {FacebookArticle} from './app/components/FacebookArticle';
+import {Header} from './app/components/Header';
 import data from './data.json';
 import './index.css';
 
+
 var currentArtiekel = 1;
-    
+
+
+
+
+
+//object maken
+var appVragen = data;
+console.log(appVragen[0].likes);
 
 export default class App extends Component {
+    state = {users: []}
     
     constructor(){
         super();
         this.state = {
             geladenArtiekels: currentArtiekel
         }
+        fetch('/users')
+      .then(res => res.json())
+      .then(users => this.setState({ users }));
     }
     MeerArtiekelen(){
         var maxId = getMax(data, "id");
@@ -33,12 +46,12 @@ export default class App extends Component {
       
       var arrayPosts = [];
       for (var i = 0; i < this.state.geladenArtiekels; i++){
-          if(data[i].typeData === "Post"){
-            arrayPosts.push(<FacebookPost MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vraag={data[i].vraag} user={data[i].user}/>
+          if(appVragen[i].typeData === "Post"){
+            arrayPosts.push(<FacebookPost MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vragen={appVragen[i]} vraag= {appVragen[i].vraag} user={appVragen[i].user} likes={appVragen[i].likes} dislikes={appVragen[i].dislikes}/>
                 );  
           }else if(data[i].typeData === "Article"){
               //let image = {require(data[i].image)};
-             arrayPosts.push(<FacebookArticle MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vraag={data[i].vraag} user={data[i].user} image={data[i].image} imageTitel={data[i].imageTitel}/>
+             arrayPosts.push(<FacebookArticle MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vraag={appVragen[i].vraag} user={appVragen[i].user} image={appVragen[i].image} imageTitel={appVragen[i].imageTitel} likes={appVragen[i].likes} dislikes={appVragen[i].dislikes}/>
                 ); 
           }
   
@@ -65,6 +78,4 @@ function getMax(arr, prop) {
     }
     return max;
 }
-
-ReactDOM.render(<App />, document.getElementById('root'));
 

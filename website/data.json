@@ -1,0 +1,6 @@
+[
+{ "id":"0", "typeData":"Post", "vraag": "Dit is vraag1" ,"user":"Joske","likes":0,"dislikes":0}, 
+{ "id":"1", "typeData":"Post", "vraag": "Dit is vraag2" ,"user":"Julleke","likes":0,"dislikes":0},
+{ "id":"2", "typeData":"Article", "vraag": "dit is een artiekel" ,"user":"Jan","image":"article.jpg","imageTitel":"Dit is de titel","likes":0,"dislikes":0},
+    { "id":"3", "typeData":"Post", "vraag": "Dit is vraag2" ,"user":"Julleke","likes":0,"dislikes":0}
+]
