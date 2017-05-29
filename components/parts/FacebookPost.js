@@ -11,25 +11,31 @@ export class FacebookPost extends Component {
         this.state = {
             Actief: "post",
             Selected: "action",
-            Selected2: "action"
+            Selected2: "action",
+            answered: false
         }
     }
      clickHandler(e){
        e.preventDefault();
-        this.props.MeerArtiekelen();
+         if(!(this.state.answered)){
+            this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
-                       Selected: "action chosen"});
-         /*var test = this.props.vragen;
-         test.likes += 1;*/
-         this.props.likeArtiekel(this.props.vragen.id);
+                       Selected: "action chosen",
+                       answered: true});
+         this.props.likeArtiekel(this.props.vragen.id); 
+         }
+        
          
     }
     clickHandler2(e){
        e.preventDefault();
+        if(!(this.state.answered)){
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
-                       Selected2: "action chosen"});
+                       Selected2: "action chosen",
+                       answered: true});
         this.props.dislikeArtiekel(this.props.vragen.id);
+        }
     }
     
   render() {
