@@ -1,14 +1,10 @@
 {
-  "name": "react-poll",
-  "version": "1.0.0",
-  "description": "React poll for presentation and polling",
+  "name": "Sheeple-app",
+  "version": "2.1.0",
+  "description": "React app for sheeple",
   "main": "index.js",
-  "author": "MSK",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ManvendraSK/react-poll"
-  },
+  "author": "Sheeple",
+  "license": "",
   "scripts": {
     "prestart": "webpack",
     "start": "nodemon app-server.js --ignore components/"
