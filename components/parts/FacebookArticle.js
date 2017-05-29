@@ -19,23 +19,30 @@ export class FacebookArticle extends Component {
         this.state = {
             Actief: "post",
             Selected: "action",
-            Selected2: "action"
+            Selected2: "action",
+            answered: false
         }
     }
      clickHandler(e){
        e.preventDefault();
+         if(!(this.state.answered)){
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
-                       Selected: "action chosen"});
+                       Selected: "action chosen",
+                       answered: true});
          this.props.likeArtiekel(this.props.vragen.id);
+         }
          
     }
     clickHandler2(e){
        e.preventDefault();
+        if(!(this.state.answered)){
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
-                       Selected2: "action chosen"});
+                       Selected2: "action chosen",
+                       answered: true});
         this.props.dislikeArtiekel(this.props.vragen.id);
+        }
     }
     
   render() {

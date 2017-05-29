@@ -77,7 +77,7 @@ export default class App extends Component {
       for (var i = 0; i < this.state.geladenArtiekels; i++){
           if(this.state.start){
           if(this.state.vragen[i].typeData === "Post"){
-            arrayPosts.push(<FacebookPost likeArtiekel={this.likeArtiekel.bind(this)} dislikeArtiekel={this.dislikeArtiekel.bind(this)} MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vragen={this.state.vragen[i]} vraag= {this.state.vragen[i].vraag} user={this.state.vragen[i].user} likes={this.state.vragen[i].likes} dislikes={this.state.vragen[i].dislikes}/>
+            arrayPosts.push(<FacebookPost likeArtiekel={this.likeArtiekel.bind(this)} dislikeArtiekel={this.dislikeArtiekel.bind(this)} MeerArtiekelen={this.MeerArtiekelen.bind(this)} key={i} vragen={this.state.vragen[i]} vraag= {this.state.vragen[i].vraag} user={this.state.vragen[i].user} likes={this.state.vragen[i].likes} dislikes={this.state.vragen[i].dislikes} />
                 );  
           }else if(this.state.vragen[i].typeData === "Article"){
               //let image = {require(data[i].image)};
