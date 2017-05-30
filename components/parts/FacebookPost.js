@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import profilePic from "../../public/img/anoymous-profilepic.png";
 //import '../../public/App.css';
 
-
+//opslossing voor alle images van de artiekelen in te laden zonder voor elke images een import te moeten schrijven
+//http://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+const images = importAll(require.context('../../public/img/', false, /\.(png|jpe?g|svg)$/));
 
 export class FacebookPost extends Component {
     
@@ -43,7 +49,7 @@ export class FacebookPost extends Component {
         
     <div className={this.state.Actief}>
             <div className="post-header cf">
-                <img src={profilePic} className="profilePic" alt="profilePic" />
+                <img src={images[this.props.postImage]} className="profilePic" alt="profilePic" />
                 <h2>{this.props.user}</h2>
                 <div className="post-info">
                     <p>September 18 at 11:17  <span className="icon">g</span></p>

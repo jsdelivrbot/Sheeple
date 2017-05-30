@@ -64,6 +64,28 @@ header .notificationglobe .notification-amount{
 header .notificationglobe.active .notification-amount{
     display: block;
 }
+.postIntro {
+    background-color:#FFF;
+    margin: 40px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 20px;
+    font-size: 14pt;
+}
+.postIntro p{
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+}
+.buttonIntro{
+    font-size: 25pt;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #3b5998;
+    color: #FFF;
+    display: block;
+    margin: auto;
+}
+
 .post {
     background-color:#FFF;
     margin-top: 15px;

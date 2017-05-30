@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import profilePic from "../../public/img/anoymous-profilepic.png";
 //import '../../public/App.css';
 
 
@@ -49,7 +48,7 @@ export class FacebookArticle extends Component {
     return (
     <div className= {this.state.Actief}>
             <div className="post-header cf">
-                <img src={profilePic} className="profilePic" alt="profilePic" />
+                <img src={images[this.props.postImage]} className="profilePic" alt="profilePic" />
                 <h2>{this.props.user}</h2>
                 <div className="post-info">
                     <p>September 18 at 11:17  <span className="icon">g</span></p>
@@ -60,7 +59,6 @@ export class FacebookArticle extends Component {
                 <div className="article">
                     <img alt={this.props.imageTitel} src={images[this.props.image]} />
                     <h3>{this.props.imageTitel}</h3>
-        
                 </div>
             </div>
             <div className="post-likesamount">
@@ -70,8 +68,8 @@ export class FacebookArticle extends Component {
         {this.props.dislikes}</div>
             </div>
             <div className="post-actions cf">
-                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">l</span>Like</a></div>
-                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)} ><a href="#"><span className="icon">d</span>Dislike</a></div>
+                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">l</span>Real</a></div>
+                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)} ><a href="#"><span className="icon">d</span>Fake</a></div>
             </div>
         </div>
  );
