@@ -22,7 +22,10 @@ export default class App extends Component {
             geladenArtiekels: currentArtiekel,
             vragen: {},
             Scherm: 1,
-            resultaatGebruiker: ""
+            resultaatGebruiker: "",
+            endtext: "",
+            endImage: "",
+            
         }
     }
     componentDidMount() {
@@ -75,14 +78,23 @@ export default class App extends Component {
         var largest = Math.max.apply(Math, [gebruiker.s,gebruiker.d,gebruiker.g]);
             if(largest === gebruiker.s){
                 this.setState({
-                resultaatGebruiker: "Sheep"});
+                resultaatGebruiker: "Sheep",
+                endtext: "Je volgde vooral de mening van anderen en hechtte belang aan wat andere mensen denken.",
+                endImage: "sheep.png"
+                });
                 
             }else if(largest === gebruiker.d){
                 this.setState({
-                resultaatGebruiker: "Denker"});
+                resultaatGebruiker: "Denker",
+                endtext: "Je dacht kritisch na en liet je niet beïnvloeden door de mening van anderen.",
+                endImage: "denker.png"
+                });
             }else if(largest === gebruiker.g){
                 this.setState({
-                resultaatGebruiker: "Goedgelovig"});
+                resultaatGebruiker: "Goedgelovige",
+                endtext: "Je liet je misleiden door fake nieuws en de mening van de meerderheid.",
+                endImage: "goedgelovig.png"
+                });
                 
             }
             console.log(largest);
@@ -130,15 +142,16 @@ export default class App extends Component {
                 />
             );
         } else if (this.state.Scherm == 2) {
+            arrayPosts = [];
             for (var i = 0; i < this.state.geladenArtiekels; i++) {
                 if (this.state.start) {
                     if (this.state.vragen[i].typeData === "Post") {
-                        arrayPosts.push( < FacebookPost likeArtiekel = {this.likeArtiekel.bind(this)} dislikeArtiekel = {this.dislikeArtiekel.bind(this)} MeerArtiekelen = {this.MeerArtiekelen.bind(this)} key = {i} vragen = {this.state.vragen[i]} vraag = {this.state.vragen[i].vraag} user = {this.state.vragen[i].user}likes = {this.state.vragen[i].likes} dislikes = {this.state.vragen[i].dislikes} postImage = {this.state.vragen[i].postImg}
+                        arrayPosts.unshift( < FacebookPost likeArtiekel = {this.likeArtiekel.bind(this)} dislikeArtiekel = {this.dislikeArtiekel.bind(this)} MeerArtiekelen = {this.MeerArtiekelen.bind(this)} key = {i} vragen = {this.state.vragen[i]} vraag = {this.state.vragen[i].vraag} user = {this.state.vragen[i].user}likes = {this.state.vragen[i].likes} dislikes = {this.state.vragen[i].dislikes} postImage = {this.state.vragen[i].postImg}
                             />
                         );
                     } else if (this.state.vragen[i].typeData === "Article") {
                         //let image = {require(data[i].image)};
-                        arrayPosts.push( < FacebookArticle likeArtiekel = {this.likeArtiekel.bind(this)} dislikeArtiekel = {this.dislikeArtiekel.bind(this)} MeerArtiekelen = {this.MeerArtiekelen.bind(this)} key = {i} vragen = {this.state.vragen[i]} vraag = {this.state.vragen[i].vraag} user = {this.state.vragen[i].user}image = { this.state.vragen[i].image} imageTitel = {this.state.vragen[i].imageTitel} likes = {this.state.vragen[i].likes} dislikes = {this.state.vragen[i].dislikes} postImage = {this.state.vragen[i].postImg}
+                        arrayPosts.unshift( < FacebookArticle likeArtiekel = {this.likeArtiekel.bind(this)} dislikeArtiekel = {this.dislikeArtiekel.bind(this)} MeerArtiekelen = {this.MeerArtiekelen.bind(this)} key = {i} vragen = {this.state.vragen[i]} vraag = {this.state.vragen[i].vraag} user = {this.state.vragen[i].user}image = { this.state.vragen[i].image} imageTitel = {this.state.vragen[i].imageTitel} likes = {this.state.vragen[i].likes} dislikes = {this.state.vragen[i].dislikes} postImage = {this.state.vragen[i].postImg}
                             />
                         );
                     }
@@ -148,7 +161,7 @@ export default class App extends Component {
         } else if (this.state.Scherm == 3) {
             //laatste scherm
             arrayPosts = [];
-            arrayPosts.push( <OutroScreen key="outro" resultaat = {this.state.resultaatGebruiker} 
+            arrayPosts.push( <OutroScreen key="outro" resultaat = {this.state.resultaatGebruiker} text = {this.state.endtext} endimage = {this.state.endImage} 
                             />
             );
         }

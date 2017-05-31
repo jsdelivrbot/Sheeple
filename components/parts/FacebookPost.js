@@ -15,11 +15,11 @@ export class FacebookPost extends Component {
     constructor(){
         super();
         this.state = {
-            Actief: "post",
+            Actief: "post animate-top",
             Selected: "action",
             Selected2: "action",
             answered: false
-        }
+                    }
     }
      clickHandler(e){
        e.preventDefault();
@@ -27,7 +27,9 @@ export class FacebookPost extends Component {
             this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
                        Selected: "action chosen",
-                       answered: true});
+                       answered: true
+                       
+                       });
          this.props.likeArtiekel(this.props.vragen.id); 
          }
         
@@ -39,7 +41,9 @@ export class FacebookPost extends Component {
         this.props.MeerArtiekelen();
          this.setState({Actief: "post nonactive",
                        Selected2: "action chosen",
-                       answered: true});
+                       answered: true
+                       
+                       });
         this.props.dislikeArtiekel(this.props.vragen.id);
         }
     }
@@ -48,7 +52,7 @@ export class FacebookPost extends Component {
     return (
         
     <div className={this.state.Actief}>
-            <div className="post-header cf">
+            <div  className="post-header cf">
                 <img src={images[this.props.postImage]} className="profilePic" alt="profilePic" />
                 <h2>{this.props.user}</h2>
                 <div className="post-info">

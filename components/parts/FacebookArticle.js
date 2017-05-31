@@ -16,7 +16,7 @@ export class FacebookArticle extends Component {
     constructor(){
         super();
         this.state = {
-            Actief: "post",
+            Actief: "post animate-top",
             Selected: "action",
             Selected2: "action",
             answered: false
@@ -62,14 +62,14 @@ export class FacebookArticle extends Component {
                 </div>
             </div>
             <div className="post-likesamount">
-                <div className="likesamount"><span className="icon">L</span>
+                <div className="likesamount"><span className="icon">R</span>
         {this.props.likes}</div>
-                <div className="dislikesamount"><span className="icon">D</span>
+                <div className="dislikesamount"><span className="icon">F</span>
         {this.props.dislikes}</div>
             </div>
             <div className="post-actions cf">
-                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">l</span>Real</a></div>
-                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)} ><a href="#"><span className="icon">d</span>Fake</a></div>
+                <div className={this.state.Selected} onClick={this.clickHandler.bind(this)} ><a href="#"><span className="icon">r</span>Real</a></div>
+                <div className={this.state.Selected2} onClick={this.clickHandler2.bind(this)} ><a href="#"><span className="icon">f</span>Fake</a></div>
             </div>
         </div>
  );

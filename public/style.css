@@ -31,6 +31,30 @@ body {
 header {
     padding: 10px 30px;
     background-color: #3b5998;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.clearfixedheader{
+    height: 69px;
+}
+
+.animate-top{
+    position:relative;
+    animation:animatetop 0.4s
+}
+
+@keyframes animatetop{
+    from{
+        top:-300px;
+        opacity:0
+    }
+    to{
+        top:0;
+        opacity:1
+    }
 }
 
 header img {
@@ -64,32 +88,124 @@ header .notificationglobe .notification-amount{
 header .notificationglobe.active .notification-amount{
     display: block;
 }
+
+.leftImage{
+    position:relative;
+    animation:animateleft 1s
+}
+
+@keyframes animateleft{
+    from{
+        left:-300px;
+        opacity:0
+    }
+    to{
+        left:0;
+        opacity:1
+    }
+}
+
+.rightImage{
+    position:relative;
+    animation:animateright 1s
+}
+@keyframes animateright{
+    from{
+        right:-300px;
+        opacity:0
+    }
+    to{
+        right:0;
+        opacity:1
+    }
+}
+
+.postIntro ul{
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.postIntro li{
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    margin: 20px 15% 30px 15%;
+}
+
+.introImage{
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.postIntro h4{
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    font-size: 10pt;
+}
+
+.cf:before, .cf:after {
+    content: " "; display: table;
+}
+.cf:after {
+    clear: both;
+}
+
 .postIntro {
-    background-color:#FFF;
-    margin: 40px;
-    padding: 20px 30px 20px 30px;
-    border-radius: 20px;
+    background-color: #4466ae;
+    margin: -69px 0 0 0;
+    height: 100vh;
+    padding: 89px 30px 20px 30px;
     font-size: 14pt;
 }
+
+.postIntro h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20pt;
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 0;
+    text-transform: uppercase;
+}
+
 .postIntro p{
-    padding: 20px 30px 20px 30px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 11pt;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0 10px 0;
     text-align: center;
 }
+
 .buttonIntro{
-    font-size: 25pt;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    bottom: 40px;
+    left: 10%;
+    right: 0;
+    width: 80%;
+    font-size: 13pt;
     border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: #3b5998;
-    color: #FFF;
+    border-radius: 3px;
+    padding: 0.5em 2em;
+    background-color: #ffffff;
+    color: #3b5998;
     display: block;
-    margin: auto;
 }
 
 .post {
     background-color:#FFF;
     margin-top: 15px;
     padding: 20px 30px 0 30px;
+    z-index: 1;
 }
 .post .post-header > img {
     width: 45px;
