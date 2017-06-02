@@ -25,7 +25,6 @@ export default class App extends Component {
             resultaatGebruiker: "",
             endtext: "",
             endImage: "",
-            
         }
     }
     componentDidMount() {
@@ -80,20 +79,21 @@ export default class App extends Component {
                 this.setState({
                 resultaatGebruiker: "Sheep",
                 endtext: "Je volgde vooral de mening van anderen en hechtte belang aan wat andere mensen denken.",
-                endImage: "sheep.png"
+                endImage: "sheep.gif"
                 });
                 
             }else if(largest === gebruiker.d){
                 this.setState({
                 resultaatGebruiker: "Denker",
                 endtext: "Je dacht kritisch na en liet je niet beïnvloeden door de mening van anderen.",
-                endImage: "denker.png"
+                endImage: "denker.gif"
                 });
             }else if(largest === gebruiker.g){
                 this.setState({
+                resultaatGebruiker: "Goedgelovig",
                 resultaatGebruiker: "Goedgelovige",
                 endtext: "Je liet je misleiden door fake nieuws en de mening van de meerderheid.",
-                endImage: "goedgelovig.png"
+                endImage: "goedgelovig.gif"
                 });
                 
             }

@@ -19,7 +19,7 @@ export class IntroScreen extends Component {
     
   render() {
     return (
-    <div className="postIntro">
+    <div className="postIntro cf">
         <div className="welcomecontainer">    
         <h3>Welcome</h3>
         

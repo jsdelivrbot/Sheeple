@@ -9,11 +9,11 @@ export class Header extends Component {
     
   render() {
     return (
+        
         <div>
         <header className="cf">
         <img src={logo} className="App-logo" alt="logo" />
         <a className="notificationglobe active" href="#">
-           <img src={logoPong} alt="logoPong" />
         </a>
     </header>
         <div className="clearfixedheader"></div>

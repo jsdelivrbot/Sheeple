@@ -1,4 +1,3 @@
-        
 import React, { Component } from 'react';
 
 function importAll(r) {
@@ -6,7 +5,7 @@ function importAll(r) {
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
-const images = importAll(require.context('../../public/img/', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../public/img/', false, /\.(png|jpe?g|svg|gif)$/));
 
 
 

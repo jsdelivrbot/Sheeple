@@ -1,12 +1,12 @@
 [
-{ "id":"0","postImg":"anoymous-profilepic.png", "typeData":"Article", "vraag": "NVA voert nieuw omstreden wetvoorstel in!" ,"user":"Het Eerste Nieuws","image":"article.jpg","imageTitel":"NVA maakt paspoort onmogelijk voor immigranten","likes":42,"dislikes":0,"lsheep":1,"ldenker":0,"lgoedgelovig":1,"dsheep":0,"ddenker":3,"dgoedgelovig":0},
+{ "id":0,"postImg":"heteerstenieuws.png", "typeData":"Article", "vraag": "NVA voert nieuw omstreden wetvoorstel in!" ,"user":"Het Eerste Nieuws","image":"wetsvoorstel.jpg","imageTitel":"NVA maakt Belgisch paspoort onmogelijk voor immigranten","likes":42,"dislikes":28,"lsheep":2,"ldenker":0,"lgoedgelovig":1,"dsheep":0,"ddenker":3,"dgoedgelovig":0},
     
-{ "id":"1","postImg":"anoymous-profilepic.png", "typeData":"Article", "vraag": "Gaat Facebook te ver met censuur?" ,"user":"De NieuwsKrant","image":"article.jpg","imageTitel":"Facebook censureert foto van 'napalmmeisje'","likes":0,"dislikes":34,"lsheep":0,"ldenker":1,"lgoedgelovig":0,"dsheep":2,"ddenker":0,"dgoedgelovig":2},
+{ "id":1,"postImg":"denieuwskrant.png", "typeData":"Article", "vraag": "Gaat Facebook te ver met censuur?" ,"user":"De NieuwsKrant","image":"napalmmeisje.jpg","imageTitel":"Facebook censureert foto van 'napalmmeisje'","likes":6,"dislikes":34,"lsheep":0,"ldenker":1,"lgoedgelovig":0,"dsheep":2,"ddenker":0,"dgoedgelovig":2},
 
-{ "id":"2","postImg":"anoymous-profilepic.png", "typeData":"Post", "vraag": "Mexico will pay for the wall!" ,"user":"Donald J. Trump","likes":22,"dislikes":0,"lsheep":2,"ldenker":0,"lgoedgelovig":2,"dsheep":0,"ddenker":1,"dgoedgelovig":0},
+{ "id":2,"postImg":"donaldtrump.jpg", "typeData":"Post", "vraag": "Mexico will pay for the wall!" ,"user":"Donald J. Trump","likes":22,"dislikes":17,"lsheep":2,"ldenker":0,"lgoedgelovig":2,"dsheep":0,"ddenker":1,"dgoedgelovig":0},
     
-{ "id":"3","postImg":"anoymous-profilepic.png", "typeData":"Post", "vraag": "Immigration threatens the survival of our people." ,"user":"Marine Le Pen ","likes":19,"dislikes":0,"lsheep":2,"ldenker":0,"lgoedgelovig":1,"dsheep":0,"ddenker":2,"dgoedgelovig":0},
+{ "id":3,"postImg":"marinelepen.jpg", "typeData":"Post", "vraag": "Immigration threatens the survival of our people." ,"user":"Marine Le Pen ","likes":19,"dislikes":3,"lsheep":2,"ldenker":0,"lgoedgelovig":1,"dsheep":0,"ddenker":2,"dgoedgelovig":0},
     
-{ "id":"4","postImg":"anoymous-profilepic.png", "typeData":"Article", "vraag": "Koning Filip: 'Hij vervulde niet al zijn taken'" ,"user":"De Gazet Van België","image":"article.jpg","imageTitel":"Koning Filip is een betere koning als Albert II","likes":0,"dislikes":0,"lsheep":0,"ldenker":0,"lgoedgelovig":3,"dsheep":1,"ddenker":2,"dgoedgelovig":0}
+{ "id":4,"postImg":"gazetvanbelgie.png", "typeData":"Article", "vraag": "Koning Filip: 'Hij vervulde niet al zijn taken'" ,"user":"De Gazet Van België","image":"filip.jpg","imageTitel":"Koning Filip is een betere koning als Albert II","likes":3,"dislikes":2,"lsheep":0,"ldenker":0,"lgoedgelovig":3,"dsheep":1,"ddenker":2,"dgoedgelovig":0}
 
 ]

@@ -159,9 +159,10 @@ header .notificationglobe.active .notification-amount{
 .postIntro {
     background-color: #4466ae;
     margin: -69px 0 0 0;
-    height: 100vh;
     padding: 89px 30px 20px 30px;
     font-size: 14pt;
+    height: auto;
+    min-height: 100vh;
 }
 
 .postIntro h3{
@@ -185,12 +186,9 @@ header .notificationglobe.active .notification-amount{
 }
 
 .buttonIntro{
-    margin: 0;
-    position: absolute;
+    margin: 20px auto;
     text-align: center;
     bottom: 40px;
-    left: 10%;
-    right: 0;
     width: 80%;
     font-size: 13pt;
     border: none;
@@ -295,11 +293,26 @@ header .notificationglobe.active .notification-amount{
     margin-right: 6px
 }
 
-
-.cf:before, .cf:after {
-    content: " "; display: table;    
+.finalImage{
+    padding: 15%;
+    width: 100%;
+    border-radius: 50%;
 }
 
-.cf:after { 
-    clear: both; 
+.postIntro h2{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14pt;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+.loading{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
